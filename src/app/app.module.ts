@@ -14,6 +14,13 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
+import { authInterceptorProviders } from './services/auth.interceptor';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +28,11 @@ import {MatCardModule} from '@angular/material/card';
     NavbarComponent,
     SignupComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    DashboardComponent,
+    UserDashboardComponent,
+    DashboardComponent,
+    UserDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -33,8 +44,11 @@ import {MatCardModule} from '@angular/material/card';
     FormsModule,
     HttpClientModule,
     MatCardModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSnackBarModule,
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

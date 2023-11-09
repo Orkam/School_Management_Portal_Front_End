@@ -1,0 +1,22 @@
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navbar-title {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  
+ 
+  .navbar-spacer {
+    flex: 1;
+  }
+
+  #logBtn{
+   
+    margin-right: 50px;
+  }
+  .mat-toolbar button:last-child {
+    margin-right: 50px; 
+  }

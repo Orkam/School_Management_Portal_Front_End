@@ -4,6 +4,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 
+import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
+import { AdminGuard } from './services/admin.guard';
+import { NormalGuard } from './services/normal.guard';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -12,6 +17,18 @@ const routes: Routes = [
   },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
+  {
+    path:'admin',
+    component:DashboardComponent,
+    pathMatch:'full',
+    canActivate:[AdminGuard]
+  },
+  {
+    path:'user-dashboard',
+    component:UserDashboardComponent,
+    pathMatch:'full',
+    canActivate:[NormalGuard]
+  }
 ];
 
 @NgModule({

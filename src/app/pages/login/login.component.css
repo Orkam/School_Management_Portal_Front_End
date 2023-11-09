@@ -1,0 +1,9 @@
+
+
+ 
+
+  .mat-card {
+    width: 400px; /* Ancho deseado */
+    height: 300px; /* Altura deseada */
+    padding: 20px; /* Espaciado interior deseado */
+  }
