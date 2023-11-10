@@ -1,13 +1,20 @@
 <mat-toolbar color="primary">
-    <button mat-icon-button routerLink="/">
-      <mat-icon>home</mat-icon>
-    </button>
-    <span class="navbar-title">School Portal</span>
-    <span class="navbar-spacer"></span>
-    <button id="logBtn" mat-icon-button routerLink="/login">
-      Log in
-    </button>
-    <button mat-icon-button routerLink="/signup">
-       Sign up
-      </button>
-  </mat-toolbar>
+  <button mat-icon-button routerLink="/">
+    <mat-icon>home</mat-icon>
+  </button>
+  <span class="navbar-title">School Portal</span>
+  <span class="navbar-spacer"></span>
+  <button *ngIf= "!isLoggedIn" id="logBtn" mat-icon-button routerLink="/login">
+    Log in
+  </button>
+  <button *ngIf= "!isLoggedIn" mat-icon-button routerLink="/signup">
+    Sign up
+  </button>
+
+  <button *ngIf= "isLoggedIn" id="logBtn" mat-icon-button (click) = "logout()">
+    Logout
+  </button>
+  <button *ngIf= "isLoggedIn" mat-icon-button >
+    {{user.username}}
+  </button>
+</mat-toolbar>
