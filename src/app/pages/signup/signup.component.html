@@ -40,6 +40,16 @@
               <mat-label>Phone</mat-label>
               <input required [(ngModel)] = "user.phone" type="number" name = "phone" matInput placeholder="Add a phone">
             </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Role</mat-label>
+              <mat-select required [(ngModel)]= "user.role" name="role">
+                <mat-option value="Admin">Admin</mat-option>
+                <mat-option value="Normal">Normal</mat-option>
+                
+              </mat-select>
+            </mat-form-field>
+
   
             <div class = "container text-center">
               <button mat-raised-button color="primary">Sign Up</button>

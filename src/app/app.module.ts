@@ -17,7 +17,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
+import { MatSelectModule } from '@angular/material/select';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { authInterceptorProviders } from './services/auth.interceptor';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
@@ -32,7 +32,8 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
     DashboardComponent,
     UserDashboardComponent,
     DashboardComponent,
-    UserDashboardComponent
+    UserDashboardComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -47,6 +48,7 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
     MatToolbarModule,
     MatIconModule,
     MatSnackBarModule,
+    MatSelectModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

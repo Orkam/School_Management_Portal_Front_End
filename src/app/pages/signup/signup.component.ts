@@ -16,6 +16,7 @@ export class SignupComponent implements OnInit {
     surname: '',
     email: '',
     phone: '',
+    role: '',
   };
 
   constructor(private userService: UserService) {}
@@ -23,6 +24,8 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {}
 
   formSubmit() {
+
+    
     this.userService.registerUser(this.user).subscribe((data) => {
 
       Swal.fire('User Registered successfully','','success');

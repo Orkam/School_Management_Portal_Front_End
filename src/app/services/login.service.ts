@@ -21,7 +21,7 @@ export class LoginService {
   }
 
   public getCurrentUser(){
-    return this.http.get(`${baseUrl}/actual-user`);
+    return this.http.get(`${baseUrl}/current-user`);
   }
 
  
