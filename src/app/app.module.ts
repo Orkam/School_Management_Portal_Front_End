@@ -21,6 +21,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { authInterceptorProviders } from './services/auth.interceptor';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
+import { MatListModule } from '@angular/material/list';
+import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
+import { UsersListComponent } from './pages/admin/users-list/users-list.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +38,10 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
     UserDashboardComponent,
     DashboardComponent,
     UserDashboardComponent,
+    ProfileComponent,
+    SidebarComponent,
+    WelcomeComponent,
+    UsersListComponent,
     
   ],
   imports: [
@@ -48,7 +57,8 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
     MatToolbarModule,
     MatIconModule,
     MatSnackBarModule,
-    MatSelectModule
+    MatSelectModule,
+    MatListModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

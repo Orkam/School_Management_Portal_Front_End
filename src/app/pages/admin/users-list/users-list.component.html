@@ -1,0 +1,40 @@
+<mat-card>
+  <mat-card-content>
+    <h1>Search</h1>
+
+    <form (ngSubmit)="formSubmit()">
+      <h3>Search by Name and Surname:</h3>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input
+          required
+          [(ngModel)]= "user.name"
+          name="name"
+          matInput
+          placeholder="name"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Surname</mat-label>
+        <input
+          required
+          [(ngModel)]= "user.surname"
+          name="surname"
+          matInput
+          placeholder="surname"
+        />
+      </mat-form-field>
+
+      <h3>Search by Role:</h3>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Role</mat-label>
+        <mat-select required [(ngModel)]= "user.role" name="role">
+          <mat-option value="Admin">Admin</mat-option>
+          <mat-option value="Normal">Normal</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+</mat-card>
