@@ -26,6 +26,9 @@ import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
 import { MatListModule } from '@angular/material/list';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import { UsersListComponent } from './pages/admin/users-list/users-list.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,7 @@ import { UsersListComponent } from './pages/admin/users-list/users-list.componen
     WelcomeComponent,
     UsersListComponent,
     
+    
   ],
   imports: [
     BrowserModule,
@@ -58,7 +62,11 @@ import { UsersListComponent } from './pages/admin/users-list/users-list.componen
     MatIconModule,
     MatSnackBarModule,
     MatSelectModule,
-    MatListModule
+    MatListModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatTableModule,
+
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
