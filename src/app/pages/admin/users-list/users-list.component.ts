@@ -11,25 +11,49 @@ import { User } from 'src/app/user';
 export class UsersListComponent implements OnInit {
   searchOption: string = 'byname';
   userList: User[];
-  dataSource:any;
+  dataSource: any;
 
   user: User = new User();
-  displayedColumns: string[] = ['id', 'name', 'surname', 'email','phone'];
+  displayedColumns: string[] = [
+    'id',
+    'name',
+    'surname',
+    'email',
+    'phone',
+    'role',
+    'enable',
+  ];
 
   constructor(private userService: UserService) {}
-  isChecked: boolean = false;
+  searched: boolean = false;
 
   ngOnInit(): void {}
 
-  onSearchOptionChange() {}
+  onSearchOptionChange() {
+    this.searched = false;
+  }
 
   formSubmit() {
+    this.searched = true;
     if (this.searchOption == 'all') {
       this.userService.getAllUsers().subscribe((data) => {
         this.userList = data;
 
         this.dataSource = new MatTableDataSource<User>(this.userList);
       });
+    } else if (this.searchOption == 'byRole') {
+      this.userService.getUserByRole(this.user.role).subscribe((data) => {
+        this.userList = data;
+        this.dataSource = new MatTableDataSource<User>(this.userList);
+      });
+    } else {
+      this.userService
+        .getUserByName(this.user.name, this.user.surname)
+        .subscribe((data) => {
+          this.userList = data;
+
+          this.dataSource = new MatTableDataSource<User>(this.userList);
+        });
     }
   }
 }

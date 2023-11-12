@@ -4,7 +4,8 @@ export class User {
     name:String;
     surname:String;
     mail:String;
-    role:String
+    role:String;
+    enable:boolean;
 
 
 
