@@ -11,6 +11,8 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 import { ProfileComponent } from './pages/profile/profile.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import { UsersListComponent } from './pages/admin/users-list/users-list.component';
+import { ViewCathegoriesComponent } from './pages/admin/view-cathegories/view-cathegories.component';
+import { AddCathegoryComponent } from './pages/admin/add-cathegory/add-cathegory.component';
 
 const routes: Routes = [
   {
@@ -36,8 +38,10 @@ const routes: Routes = [
       },
       {
         path: 'users-list',
-        component:UsersListComponent
-      }
+        component: UsersListComponent,
+      },
+      { path: 'categories', component: ViewCathegoriesComponent },
+      { path: 'add-category', component: AddCathegoryComponent },
     ],
   },
   {

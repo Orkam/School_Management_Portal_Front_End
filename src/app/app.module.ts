@@ -29,6 +29,8 @@ import { UsersListComponent } from './pages/admin/users-list/users-list.componen
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
+import { ViewCathegoriesComponent } from './pages/admin/view-cathegories/view-cathegories.component';
+import { AddCathegoryComponent } from './pages/admin/add-cathegory/add-cathegory.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { MatTableModule } from '@angular/material/table';
     SidebarComponent,
     WelcomeComponent,
     UsersListComponent,
+    ViewCathegoriesComponent,
+    AddCathegoryComponent,
     
     
   ],
