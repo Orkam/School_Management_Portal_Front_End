@@ -12,7 +12,7 @@ export class ViewCathegoriesComponent implements OnInit {
   constructor(private cathegoryServices: CathegoryService) {}
 
   ngOnInit(): void {
-    this.cathegoryServices.listarCathegories().subscribe(
+    this.cathegoryServices.listCathegories().subscribe(
       (data: any) => {
         this.cathegories = data;
       },

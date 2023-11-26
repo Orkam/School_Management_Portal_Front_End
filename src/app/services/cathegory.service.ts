@@ -10,7 +10,7 @@ export class CathegoryService {
   constructor(private http:HttpClient) { }
 
 
-  public listarCathegories(){
+  public listCathegories(){
     return this.http.get(`${baserUrl}/cathegory/`);
   }
 

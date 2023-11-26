@@ -1,0 +1,27 @@
+<mat-card class="mt10" *ngFor = "let e of assessment ">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>
+          {{ e.title }}
+        </mat-card-title>
+        <mat-card-subtitle *ngFor="let item of e.cathegory | keyvalue">
+          <ng-container *ngIf="item.key === 'title'">
+            {{ item.value }}
+          </ng-container>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-card-actions>
+        <button mat-flat-button color="primary" [routerLink] = "">Questions</button>
+        <button mat-stroked-button color="primary" class="ml20">Max Points {{e.maxPoints}}</button>
+        <button mat-stroked-button color="primary" class="ml20">Questions {{ e.numQuestions }}</button>
+        <button [routerLink] = "" mat-flat-button color="primary" class="ml20">Update</button>
+        <button mat-flat-button color="primary" class="ml20">Attemps</button>
+        <button mat-flat-button color="warn" class="ml10" (click)="deleteAsessment(e.assignmentID)">Delete</button>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+  
+  <div class="container text-center mt20">
+    <button routerLink="/admin/add-assessment" mat-raised-button color="primary">Add Assessment</button>
+  </div>

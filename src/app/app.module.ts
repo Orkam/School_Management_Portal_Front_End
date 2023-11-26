@@ -31,6 +31,9 @@ import {MatRadioModule} from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
 import { ViewCathegoriesComponent } from './pages/admin/view-cathegories/view-cathegories.component';
 import { AddCathegoryComponent } from './pages/admin/add-cathegory/add-cathegory.component';
+import { ViewAssignmentsComponent } from './pages/admin/view-assignments/view-assignments.component';
+import { AddAssessmentComponent } from './pages/admin/add-assessment/add-assessment.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,8 @@ import { AddCathegoryComponent } from './pages/admin/add-cathegory/add-cathegory
     UsersListComponent,
     ViewCathegoriesComponent,
     AddCathegoryComponent,
+    ViewAssignmentsComponent,
+    AddAssessmentComponent,
     
     
   ],
@@ -70,6 +75,7 @@ import { AddCathegoryComponent } from './pages/admin/add-cathegory/add-cathegory
     MatCheckboxModule,
     MatRadioModule,
     MatTableModule,
+    MatSlideToggleModule,
 
   ],
   providers: [authInterceptorProviders],
